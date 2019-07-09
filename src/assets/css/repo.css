@@ -1,0 +1,78 @@
+
+
+.card {
+    max-width: 80%;
+    margin: 0 auto !important;
+    margin-bottom: 3rem !important;
+    background: #eee;
+    text-align: center
+}
+
+.card-body {
+    height: 100%;
+}
+
+h5 {
+    font-size: 1.5rem
+}
+
+#stars_text,
+#issues_text {
+    background: #444;
+    color: #ccc !important;
+    border-radius: 3px;
+    margin-right: .8rem;
+    padding: .5rem
+}
+
+/*  MEDIA QUERIES */
+@media (min-width: 576px) {     /*sm*/
+}
+
+@media (min-width: 768px) {     /*md*/
+    h5, p {
+        text-align: left
+    }
+
+    p {
+        font-size: .8rem
+    }
+
+    #stars_text,
+    #issues_text {
+        padding: .3rem
+    }
+
+    span {
+        float: left;
+    }
+
+    .cardFooter {
+        position: absolute;
+        bottom: 2%
+    }
+}
+
+@media (min-width: 992px) {     /*lg*/
+    h5 { font-size: 1.8rem }
+    p { font-size: 1rem }
+
+    #stars_text,
+    #issues_text {
+        padding: .5rem
+    }
+
+    .cardFooter {
+        bottom: 10%
+    }
+}
+
+@media (min-width: 1200px) {    /*xl*/
+    .card {
+        width: 60%
+    }
+
+    span {
+        font-size: 1.1rem
+    }
+}
