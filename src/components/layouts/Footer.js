@@ -1,32 +1,38 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import $ from 'jquery'
 
-function Footer() {
-    return (
-        <div>
-            <footer style={ FooterStyle }>
-                <p style={ FooterParagraphStyle } className="text-center">
-                    Designed and coded by <Link to="#" className="text-decoration-none">izem</Link> - &copy; 2019
-                </p>
-            </footer>
-        </div>
-    )
-}
+import '../../assets/css/footer.css'
 
-const FooterStyle = {
-    background: "#232323",
-    opacity: .95,
-    position: "fixed",
-    left: 0,
-    bottom: 0,
-    width: "100%",
-    height: "auto"
-}
+class Footer extends Component {
 
-const FooterParagraphStyle = {
-    color: "#eee",
-    padding: "1rem",
-    margin: 0
+    componentDidMount() {
+        //  Smooth Scrool with jQuery
+        $('#to_top_btn').on('click', function () {
+            const header = $('#header').position().top;
+            $('html, body').animate({
+                scrollTop: header
+            }, 900);
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <footer>
+                    <p className="text text-center">
+                        Designed and coded by <Link to="#" className="text-decoration-none">izem</Link> - &copy; 2019
+                    </p>
+                    <div className="toTopBtn">
+                        <a href="#header" id="to_top_btn" className="text-decoration-none">
+                            <i className="fas fa-long-arrow-alt-up"></i>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        )
+    }
+
 }
 
 export default Footer

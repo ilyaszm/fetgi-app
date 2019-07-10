@@ -1,0 +1,36 @@
+footer {
+    background: #232323;
+    opacity: .95;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto
+}
+
+.text {
+    color: #eee;
+    padding: 1rem;
+    margin: 0
+}
+
+.toTopBtn {
+    text-align: center;
+    margin-bottom: .8rem
+}
+
+.toTopBtn a {
+    color: #eee;
+    background: #444;
+    padding: .5rem .8rem;
+    border-radius: 50%;
+    cursor: pointer
+}
+
+@media(min-width: 768px) {
+    .toTopBtn {
+        position: absolute;
+        bottom: 5%;
+        right: 2%
+    }
+}
