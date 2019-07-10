@@ -14,7 +14,9 @@ function Repo(props) {
                 </div>
                 <div className="col-md-8 col-xl-9">
                     <div className="card-body">
-                        <h5 className="card-title">{ repo.name }</h5>
+                        <h5 className="card-title">
+                            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">{ repo.name }</a>
+                        </h5>
                         <p className="card-text">{ repo.description }</p>
                         <div className="cardFooter">
                             <span className="card-text"><small className="text-muted" id="stars_text">Stars: { repo.stargazers_count } <i className="fas fa-star"></i></small></span>
