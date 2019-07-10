@@ -14,15 +14,19 @@ function Footer() {
 }
 
 const FooterStyle = {
-    background: "#222",
+    background: "#232323",
+    opacity: .95,
+    position: "fixed",
+    left: 0,
+    bottom: 0,
     width: "100%",
-    position: "absolute",
-    left: "0"
+    height: "auto"
 }
 
 const FooterParagraphStyle = {
     color: "#eee",
-    padding: "1.5rem"
+    padding: "1rem",
+    margin: 0
 }
 
 export default Footer
