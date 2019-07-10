@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import Header2 from '../layouts/Header2'
+import Header from '../layouts/Header'
 import Footer from '../layouts/Footer'
 import Repo from './Repo'
 
@@ -24,7 +24,7 @@ function Repos() {
 
     return(
         <div>
-            <Header2 />
+            <Header />
             <h4 style={ LinkStyle }>
                 <Link to="/" className="text-decoration-none">Back To Home</Link>
             </h4>

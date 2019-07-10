@@ -1,15 +1,19 @@
 import React from 'react'
+import ReactWOW from 'react-wow'
 
 import '../../assets/css/animate.css'
 import BackgroundImage from '../../assets/images/bg.png'
 
-function Header2() {
+function MainHeader() {
+
     return (
         <div>
-            <header style={ HeaderStyle } id="header">
-                <h1 className="animated fadeIn text-center text-uppercase" style={ TitleStyle }>
-                    Trending
-                </h1>
+            <header style={ HeaderStyle }>
+                <ReactWOW animation="fadeIn">
+                    <h1 className="text-center text-uppercase" style={ TitleStyle }>
+                        Welcome to fetgi app
+                    </h1>
+                </ReactWOW>
             </header>
         </div>
     )
@@ -17,7 +21,7 @@ function Header2() {
 
 const HeaderStyle = {
     width: "100%",
-    minHeight: "280px",
+    minHeight: "500px",
     background: `url(${BackgroundImage})`,
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
@@ -26,8 +30,8 @@ const HeaderStyle = {
 }
 
 const TitleStyle = {
-    paddingTop: "6rem",
+    paddingTop: "10rem",
     color: "#ddd"
 }
 
-export default Header2
+export default MainHeader
