@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
-import Header from './components/layouts/Header'
+import MainHeader from './components/layouts/MainHeader'
 import Jumbotron from './components/layouts/Jumbotron'
-import Footer from './components/layouts/Footer'
 import Repos from './components/repos/Repos'
 
 class App extends Component {
@@ -25,10 +24,18 @@ class App extends Component {
 
 const Home = () => (
     <div>
-        <Header />
+        <MainHeader />
         <Jumbotron />
-        <Footer />
+        <MainFooter />
     </div>
+)
+
+const MainFooter = () => (
+    <footer>
+        <p className="text text-center">
+            Designed and coded by <a href="https://ilyaszm.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" className="text-decoration-none">izem</a> - &copy; 2019
+        </p>
+    </footer>
 )
 
 export default App
