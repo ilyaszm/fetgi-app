@@ -6,6 +6,7 @@ import InfiniteScroll from "react-infinite-scroll-component"
 import Header from '../layouts/Header'
 import Footer from '../layouts/Footer'
 import Repo from './Repo'
+import Loader from '../layouts/Loader'
 
 function Repos() {
 
@@ -43,10 +44,10 @@ function Repos() {
             </h4>
             <hr style={ HrStyle } />
             <InfiniteScroll
-                dataLength={repos.length}
-                next={loadMoreRepos}
-                hasMore={true}
-                loader={<h4>Loading...</h4>}
+                dataLength  = {repos.length}
+                next        = {loadMoreRepos}
+                hasMore     = {true}
+                loader      = {<Loader />}
             >
                 {
                     repos.map(repo => (
