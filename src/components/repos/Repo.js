@@ -8,7 +8,7 @@ function Repo(props) {
     const { repo } = props
 
     return (
-        <ReactWOW animation="slideInRight">
+        <ReactWOW animation="fadeInRight">
             <div className="card m-3">
                 <div className="row">
                     <div className="col-md-4 col-xl-3">
