@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import ReactWOW from 'react-wow'
 
-import MainHeader from './components/layouts/MainHeader'
 import Jumbotron from './components/layouts/Jumbotron'
 import Repos from './components/repos/Repos'
+
+import './assets/css/animate.css'
+import BackgroundImage from './assets/images/bg.png'
 
 class App extends Component {
     render() {
@@ -28,6 +31,16 @@ const Home = () => (
     </div>
 )
 
+const MainHeader = () => (
+    <header style={ HeaderStyle }>
+        <ReactWOW animation="fadeIn">
+            <h1 className="text-center text-uppercase" style={ TitleStyle }>
+                Welcome to fetgi app
+            </h1>
+        </ReactWOW>
+    </header>
+)
+
 const MainFooter = () => (
     <footer>
         <p className="text text-center">
@@ -35,5 +48,20 @@ const MainFooter = () => (
         </p>
     </footer>
 )
+
+const HeaderStyle = {
+    width: "100%",
+    minHeight: "500px",
+    background: `url(${BackgroundImage})`,
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
+}
+
+const TitleStyle = {
+    paddingTop: "10rem",
+    color: "#ddd"
+}
 
 export default App
