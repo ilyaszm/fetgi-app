@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactWOW from 'react-wow'
+import Moment from 'react-moment'
 
 import '../../assets/css/repo.css'
 
@@ -24,7 +25,7 @@ function Repo(props) {
                                 <div className="cardFooter">
                                     <span className="card-text"><small className="text-muted" id="stars_text">Stars: { repo.stargazers_count } <i className="fas fa-star"></i></small></span>
                                     <span className="card-text"><small className="text-muted" id="issues_text">Issues: { repo.open_issues_count } <i className="fas fa-exclamation-triangle"></i></small></span>
-                                    <span className="card-text"><small className="text-muted">Submitted on { repo.created_at } by <b>{ repo.owner.login }</b></small></span>
+                                    <span className="card-text"><small className="text-muted">Submitted on <Moment format="DD-MMM-YYYY">{repo.created_at}</Moment>, by <b>{ repo.owner.login }</b></small></span>
                                 </div>
                             </div>
                         </div>
