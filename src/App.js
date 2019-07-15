@@ -5,15 +5,17 @@ import ReactWOW from 'react-wow'
 import Jumbotron from './components/layouts/Jumbotron'
 import Repos from './components/repos/Repos'
 
-import './assets/css/animate.css'
 import BackgroundImage from './assets/images/bg.png'
+import './assets/css/animate.css'
 
 class App extends Component {
     render() {
         return(
+            /*  To switch between pages, we used react-router  */
             <Router>
                 <div>
                     <Switch>
+                        {/* the "exact" attribut makes us navigate to the other page, otherwise it will stop and render only the Home (/) */}
                         <Route path="/" exact component={ Home } />
                         <Route path="/repos" component={ Repos } />
                     </Switch>
@@ -32,7 +34,7 @@ const Home = () => (
 )
 
 const MainHeader = () => (
-    <header style={ HeaderStyle }>
+    <header style={ MainHeaderStyle }>
         <ReactWOW animation="fadeIn">
             <h1 className="text-center text-uppercase" style={ TitleStyle }>
                 Welcome to fetgi app
@@ -49,7 +51,7 @@ const MainFooter = () => (
     </footer>
 )
 
-const HeaderStyle = {
+const MainHeaderStyle = {
     width: "100%",
     minHeight: "500px",
     background: `url(${BackgroundImage})`,

@@ -5,10 +5,13 @@ import '../../assets/css/footer.css'
 
 function Footer() {
 
+    /*  Smooth Scrool with jQuery  */
     useEffect(() => {
-        //  Smooth Scrool with jQuery
+        // get id of the toTopBtn button
         $('#to_top_btn').on('click', function () {
+            // get id of the header
             const header = $('#header').position().top;
+            // animate the scroll to top
             $('html, body').animate({
                 scrollTop: header
             }, 900);
