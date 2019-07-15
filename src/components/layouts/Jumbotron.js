@@ -12,7 +12,7 @@ function Jumbotron() {
             </ReactWOW>
             <ReactWOW animation="fadeInLeft">
             <p className="lead">
-                Basically the app is going to get the most trending games repos written in JavaScript.<br/>
+                Basically the app is going to display the most trending games repos written in JavaScript.<br/>
             </p>
             </ReactWOW>
             <ReactWOW animation="fadeIn">

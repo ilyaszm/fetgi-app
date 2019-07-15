@@ -5,7 +5,6 @@ import '../../assets/css/animate.css'
 import BackgroundImage from '../../assets/images/bg.png'
 
 function MainHeader() {
-
     return (
         <div>
             <header style={ HeaderStyle }>

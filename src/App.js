@@ -6,7 +6,6 @@ import Jumbotron from './components/layouts/Jumbotron'
 import Repos from './components/repos/Repos'
 
 class App extends Component {
-    
     render() {
         return(
             <Router>
@@ -19,7 +18,6 @@ class App extends Component {
             </Router>
         )
     }
-    
 }
 
 const Home = () => (

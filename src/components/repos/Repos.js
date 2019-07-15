@@ -12,37 +12,42 @@ function Repos() {
 
     const [repos, setRepos] = useState([])
     const [page, setPage] = useState(2)
+    const [isError, setIsError] = useState(false)
 
     // grab repos when when we load repos
     useEffect(() => {
-        axios
-            .get(`https://api.github.com/search/repositories?q=game+language:javascript&sort=stars&order=desc`)
-            .then(result => {
-                setRepos(result.data.items)
-            })
-            .catch(error => {
-                console.log(error)
-            })
+        setIsError(false)
+        try {
+            axios
+                .get(`https://api.github.com/search/repositories?q=game+language:javascript&sort=stars&order=desc`)
+                .then(result => { setRepos(result.data.items) })
+        }
+        catch (error) { setIsError(true) }
     }, []) // the empty array above is for fetching only once and avoiding the loop of fetching
 
     const loadMoreRepos = () => {
-        axios
-            .get(`https://api.github.com/search/repositories?q=game+language:javascript&sort=stars&order=desc&page=${page}`)
-            .then(
-                result => {
+        setIsError(false)
+        try {
+            axios
+                .get(`https://api.github.com/search/repositories?q=game+language:javascript&sort=stars&order=desc&page=${page}`)
+                .then( result => {
                     setPage(page + 1)
                     setRepos(repos.concat(result.data.items))
-                }
-            )
+                })
+        }
+        catch (error) { setIsError(true) }
     }
     
     return(
         <div>
             <Header />
             <h4 style={ LinkStyle }>
-                <Link to="/" className="text-decoration-none">Back To Home</Link>
+                <Link to="/" className="text-decoration-none">
+                    Back To Home
+                </Link>
             </h4>
             <hr style={ HrStyle } />
+            { isError && <h5>Something went wrong...!!</h5> }
             <InfiniteScroll
                 dataLength  = {repos.length}
                 next        = {loadMoreRepos}
