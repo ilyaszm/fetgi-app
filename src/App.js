@@ -46,7 +46,7 @@ const MainHeader = () => (
 const MainFooter = () => (
     <footer>
         <p className="text text-center">
-            Designed and coded by <a href="https://ilyaszm.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" className="text-decoration-none">izem</a> - &copy; 2019
+            Designed and coded by <a href="https://izemspot.netlify.com" target="_blank" rel="noopener noreferrer" className="text-decoration-none">izem</a> - &copy; 2019
         </p>
     </footer>
 )
