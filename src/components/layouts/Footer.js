@@ -22,7 +22,7 @@ function Footer() {
         <div>
             <footer>
                 <p className="text text-center">
-                    Designed and coded by <a href="https://ilyaszm.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" className="text-decoration-none">izem</a> - &copy; 2019
+                    Designed and coded by <a href="https://izemspot.netlify.com" target="_blank" rel="noopener noreferrer" className="text-decoration-none">izem</a> - &copy; 2019
                 </p>
                 <div className="toTopBtn">
                     <a href="#header" id="to_top_btn" className="text-decoration-none">
