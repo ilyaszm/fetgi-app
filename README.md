@@ -12,7 +12,7 @@ Basically the app has only one button to trigger the fetch method, after that it
 * [Packages & Libraries](#packages-&-libraries)
 * [Contributing](#contributing)
 * [Support](#support)
-* [Donation](#donation)
+* [Final Words](#final-words)
 * [License](#license)
 
 ## Functionalities
@@ -97,4 +97,4 @@ If you like the app, please give it a star. It will mean a lot for me :)
 ## License
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2019 © <a href="https://izemspot.netlify.com" target="_blank">IZEM</a>.
+- Copyright 2019 © <a href="https://izemspot.netlify.com" target="_blank">IZEMSPOT</a>.
